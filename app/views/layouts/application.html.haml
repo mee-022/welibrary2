@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Welibrary
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .header__bar-row
+        .top-items  
+          .top-items__title
+            welibrary
+          .top-items__menu
+            - if user_signed_in?
+              .top-items__menu-signIn
+                =current_user.nickname
+                .user__info
+                  = link_to "ログアウト", destroy_user_session_path, method: :delete
+                  = link_to "マイページ","/users/#{current_user.id}"
+                = link_to "投稿する", new_tweet_path, class: "post"  
+            - else
+              .grid-6
+                = link_to "ログイン", new_user_session_path, class: "post"
+                = link_to "新規登録", new_user_registration_path, class: "post"
+
+    = yield
+    .footer
+      %p.cpcyright
+        Copyright welibrary 2020.

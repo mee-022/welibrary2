@@ -1,0 +1,38 @@
+.wrapper
+
+  .main
+    %form.form-box
+      %input.form__search{type: 'text', placeholder: '  投稿を検索する'}
+      %input.fas{type: 'submit', value: "検 索"}
+
+    .contents-row
+      - @tweets.each do |tweet|
+        .content-post
+          .more
+            %span= image_tag 'arrow_top.png'
+            %ul.more_list
+              %li
+                = link_to '詳細', tweet_path(tweet.id), method: :get
+              - if user_signed_in? && current_user.id == tweet.user_id
+                %li
+                  = link_to '編集', edit_tweet_path(tweet.id), method: :get
+                %li
+                  = link_to '削除', tweet_path(tweet.id), method: :delete
+          .content-image
+            = image_tag tweet.image.url, class: "image"
+          .content-info
+            .content-title
+              【作品名】
+              %br
+              = tweet.title
+            .content-author
+              【著者】
+              %br
+              = tweet.author
+            .content-text
+              = tweet.text
+            .user-name
+              %a{:href => "/users/#{tweet.user.id}"}
+                %span 投稿者
+                = tweet.user.nickname
+
