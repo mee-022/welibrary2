@@ -1,9 +1,10 @@
 .wrapper
 
   .main
-    %form.form-box
-      %input.form__search{type: 'text', placeholder: '  投稿を検索する'}
-      %input.fas{type: 'submit', value: "検 索"}
+    = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
+      = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+      = form.submit "検索", class: "search-btn"
+
 
     .contents-row
       - @tweets.each do |tweet|
