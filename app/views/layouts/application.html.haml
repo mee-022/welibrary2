@@ -12,7 +12,8 @@
       .header__bar-row
         .top-items  
           .top-items__title
-            welibrary
+            =link_to root_path, class:"toppage" do
+              welibrary
           .top-items__menu
             - if user_signed_in?
               .top-items__menu-signIn
