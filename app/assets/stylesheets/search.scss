@@ -1,19 +1,35 @@
 .main{
   width: 100%;
-  height: 85vh;
   overflow: scroll;
+  .search-form{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .search-input{
+      width: 270px;
+      height: 38px;
+      border-radius: 5px;
+      font-size: 13px;
+      border: 1px solid #D8D8D8;
+    }
+    .search-btn{
+      width: 50px;
+      font-size: 12px;
+      margin-left: 20px;
+      border: none;
+      border-radius: 14px;
+      background-color: #dcd6d2;
+      color: #898880;
+    }
+    .search-btn:hover{
+      cursor: pointer;
+      color: #594e52;
+      font-weight: bold;
+    }
+  }
 }
 
-.title_text{
-  width: 100%;
-  max-width: 700px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
 
 .content-post{
   height: 240px;
@@ -31,6 +47,7 @@
   background-color: #f7f6f5;
   color: #594e52;
 }
+
 .more{
   position: absolute;
   top: 45px;
@@ -65,11 +82,12 @@
     }
     .delete:hover{
       cursor: pointer;
-      color: #594e52;
+      color: #990033;
       font-weight: bold;
     }
   }
 }
+
 
 
 .content-image{
@@ -112,4 +130,54 @@
       color: #594e52;
     }
   } 
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #dcd6d2;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #e8d3ca;
+}
+
+.container {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.container h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.comments a {
+  color: #e8d3ca;
+}
+
+.comments a:hover {
+  text-decoration: underline;
 }
