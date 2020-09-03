@@ -1,19 +1,23 @@
-.contents-row
-  %p
-    = @nickname
-    さんの投稿一覧
-  - @tweets.each do |tweet|
-    .content_post
-      .content-image
-        = image_tag tweet.image.url, class: "image"
-      .content-info
-        .content-title
-          【作品名】
-          %br
-          = tweet.title
-        .content-author
-          【著者】
-          %br
-          = tweet.author
-        .content-text
-          = tweet.text
+- content_for :css do
+  = stylesheet_link_tag 'users_show'
+
+.main
+
+  .contents-row
+    %p
+      = "#{@nickname}さんの投稿一覧"
+    - @tweets.each do |tweet|
+      .content-post
+        .content-image
+          = image_tag tweet.image.url, class: "image"
+        .content-info
+          .content-title
+            【作品名】
+            %br
+            = tweet.title
+          .content-author
+            【著者】
+            %br
+            = tweet.author
+          .content-text
+            = tweet.text

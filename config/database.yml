@@ -83,3 +83,6 @@ production:
   database: welibrary1_production
   username: welibrary1
   password: <%= ENV['WELIBRARY1_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

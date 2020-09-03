@@ -1,0 +1,40 @@
+html{
+  background-color: #eee7e0;
+  height: 100%;
+}
+.contents-row{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
+  *zoom: 1;
+  .success{
+    margin: 20px 0;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+    background-color: #f7f6f5;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  h3{
+    letter-spacing: 0.15em;
+    margin: 10px auto 20px auto;
+    font-size: 16px;
+    color: #898880;
+  }
+  .btn{
+    width: 200px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    border: 2px solid #898880;
+    border-radius: 5px;
+    color: #898880;
+    font-family: monospace;
+    text-decoration: none;
+  }
+}
