@@ -23,7 +23,7 @@ https://welibrary1.herokuapp.com/
 - 他の投稿者の投稿一覧も見られるため、レビュー内容から自分と好みの似たユーザーがおすすめしている本を見つけられるようにしたい。
 
 ## Demo
-![welibrary].(/Users/kanedamiki/projects/welibrary1/images/welibrary.png)
+<img width="1084" alt="welibrary" src="https://user-images.githubusercontent.com/67994393/92256199-61f13600-ef0e-11ea-8d56-d12b37996a6f.png">
 
 ## 工夫したポイント
 - 全体を同系色でまとめて統一感が出るようにし、ホバー色もページ内で使用している色を使うようにして落ち着きのある見た目にした。
