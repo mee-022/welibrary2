@@ -32,11 +32,43 @@ https://welibrary1.herokuapp.com/
 - タイトル、投稿者、内容、全てで検索できるようにした。
 
 ## 使用技術
-- 
+Ruby/Ruby on Rails/postgeSQL/Github/Heloku/Visual Studio Code
 
 ## 今後実装したい機能
 - ジャンル別、その時の気分で検索できる。
 - 読んだボタン、読んでみたいボタン機能がある。
 
 ## DB設計
-- 
+## tweetsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|
+|title|string|
+|author|string|
+|text|text|
+|image|string|
+|integer|user_id|
+### Association
+- belongs_to :user
+- has_many :comments
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|password_confirmation|string|null: false|
+### Association
+- has_many :tweets
+- has_many :comments
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|
+|tweet_id|integer|
+|text|text|
+### Association
+- belongs_to :tweet
+- bolongs_to :user
