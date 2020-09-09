@@ -1,6 +1,7 @@
 class Tweet < ApplicationRecord
   mount_uploader :image, ImageUploader
 
+  validates :image, presence: true
   validates :text, presence: true
   validates :title, presence: true
   validates :author, presence: true

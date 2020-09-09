@@ -4,6 +4,16 @@
 .content
 
 %h2 Log in
+%br
+
+.test-user
+  テスト用アカウント(機能確認等にはこちらをご利用ください)
+  .test-address
+    メールアドレス : test@gmail.com
+  .test-pass
+    パスワード : abc123
+  %br
+
 = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
   .field
     = f.label :email

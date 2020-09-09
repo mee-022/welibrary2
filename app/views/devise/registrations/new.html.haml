@@ -3,6 +3,11 @@
 
 .content
   %h2 Sign up
+  %br
+  .test-user
+    機能確認等にはログイン画面より、テストアカウントをご利用ください
+  %br
+
   = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
     = devise_error_messages!
     .field
