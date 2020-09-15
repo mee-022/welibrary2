@@ -60,6 +60,7 @@ gem 'font-awesome-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
+gem 'fog-aws'
 
 # group :production do
 #   gem 'pg'
